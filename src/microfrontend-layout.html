@@ -1,0 +1,75 @@
+<single-spa-router>
+  <!--
+
+    This is the single-spa Layout Definition for your microfrontends.
+    See https://single-spa.js.org/docs/layout-definition/ for more information.
+
+  -->
+
+  <!-- Example layouts you might find helpful:
+
+  <nav>
+    <application name="@org/navbar"></application>
+  </nav>
+  <route path="settings">
+    <application name="@org/settings"></application>
+  </route>
+
+  -->
+  <style>
+    body {
+      font: 16px/18px Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #fefefe
+    }
+
+    .mfe-navbar {
+      display: block;
+      padding: 15px 10px;
+      background: #222;
+    }
+
+    .mfe-navbar a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .mfe-navbar ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .main-content {
+      padding: 10px
+    }
+  </style>
+
+
+
+  <nav class="mfe-navbar">
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/admin">Tagme Admin</a></li>
+      <li><a href="/hostess">Hostess</a></li>
+    </ul>
+  </nav>
+
+  <div class="main-content">
+    <route default>
+      <img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" height="30" width="30" />
+      <img src="https://zh-hans.single-spa.js.org/img/logo-white-bgblue.svg" height="30" width="30" />
+      <h1>Tagme-MFE</h1>
+      <small>Single-spa Version: <span id="mfe-version"></span></small>
+    </route>
+    <route path="admin">
+      <application name="tagme-admin"></application>
+    </route>
+    <route path="hostess">
+      <application name="@tagme/HostessAdmin"></application>
+    </route>
+  </div>
+
+</single-spa-router>

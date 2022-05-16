@@ -1,0 +1,7 @@
+{
+	"imports": {
+		"@tagme/root-config": "//localhost:9000/tagme-root-config.js",
+		"@tagme/HostessAdmin": "//localhost:8080/tagme-HostessAdmin.js",
+		"tagme-admin": "//localhost:4200/main.js"
+	}
+}
