@@ -19,7 +19,7 @@
     This CSP allows any SSL-enabled host and for arbitrary eval(), but you should limit these directives further to increase your app's security.
     Learn more about CSP policies at https://content-security-policy.com/#directive
   -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: localhost:*; img-src * 'self' data: https:; script-src 'unsafe-inline' 'unsafe-eval' https: localhost:*; connect-src https: localhost:* ws://localhost:*; style-src 'unsafe-inline' https:; object-src 'none';">
   <meta name="importmap-type" content="systemjs-importmap" />
   
   <!-- If you wish to turn off import-map-overrides for specific environments (prod), uncomment the line below -->
@@ -59,7 +59,8 @@
         "imports": {
           "@tagme/root-config": "//localhost:9000/tagme-root-config.js",
           "@tagme/HostessAdmin": "//localhost:8080/tagme-HostessAdmin.js",
-          "tagme-admin": "//localhost:4200/main.js"
+          "tagme-admin": "//localhost:4200/main.js",
+          "@tagme/vue-app": "//localhost:8081/js/app.js"
         }
       }
     </script>
@@ -70,6 +71,7 @@
           "@tagme/root-config": "//spectacular-zabaione-ddda28.netlify.app/tagme-root-config.js",
           "@tagme/HostessAdmin": "//illustrious-klepon-27bf16.netlify.app/tagme-HostessAdmin.js",
           "tagme-admin": "//comfy-praline-b661dd.netlify.app/TagmeAdmin/main.js"
+          "@tagme/vue-app": "//master--flourishing-pegasus-abe7fe.netlify.app/js/app.js"
         }
       }
     </script>
